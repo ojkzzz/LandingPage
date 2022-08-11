@@ -13,9 +13,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #e5e5e5;
-  overflow-x: hidden;
 }
 
 a {
