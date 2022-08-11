@@ -23,11 +23,7 @@ function makeAnimationInProjects() {
 
   function clickFirstLine() {
     listItems[0].addEventListener("click", function () {
-      /*
-      textInImg.style.opacity = 1;
-      textInImg.style.visibility = "visible";
-      projectImg2.style.opacity = 0.3;
-      */
+    
       projectImgs.forEach((el) => {
         el.classList.remove("displayNone");
       });
