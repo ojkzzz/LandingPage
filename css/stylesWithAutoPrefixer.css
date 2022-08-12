@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -474,6 +467,7 @@ section.resume h3,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   overflow: hidden;
+  justify-content: center;
 }
 
 .projects__navigation {
@@ -772,6 +766,12 @@ footer {
 
 /* media */
 
+@media (min-width: 1921px) {
+  .portfolio {
+    background-size: cover;
+  }
+}
+
 @media (max-width: 1450px) {
   .nav__designer {
     left: 80px;
@@ -797,5 +797,23 @@ footer {
   .resume__skills img {
     width: 50px;
     height: 50px;
+  }
+}
+
+@media (max-width: 1390px) {
+  .nav__designer {
+    display: none;
+  }
+}
+
+@media (max-width: 1030px) {
+  .itBerries__left {
+    padding: 0 30px;
+  }
+  .designer__right__text {
+    right: 150px;
+  }
+  section.resume {
+    padding: 0 150px;
   }
 }
