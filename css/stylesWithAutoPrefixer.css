@@ -28,6 +28,10 @@ a {
   margin-bottom: 6rem;
 }
 
+.burger {
+  display: none;
+}
+
 .nav__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -503,8 +507,8 @@ section.resume h3,
   color: #fffbfb;
 }
 .white {
-  border-bottom: 1px solid #ffffff;
-  color: #fffbfb;
+  border-bottom: 1px solid #ffffff !important;
+  color: #fffbfb !important;
 }
 
 .projects__footer {
@@ -770,6 +774,12 @@ footer {
   .portfolio {
     background-size: cover;
   }
+  .resume {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+  }
 }
 
 @media (max-width: 1450px) {
@@ -815,5 +825,21 @@ footer {
   }
   section.resume {
     padding: 0 150px;
+  }
+}
+
+@media (max-width: 382px) {
+  nav.nav__header {
+    flex-direction: column;
+    position: relative;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+  .burger span {
+    border: 1px solid white;
   }
 }
