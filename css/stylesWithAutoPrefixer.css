@@ -61,7 +61,8 @@ a {
   display: inline-block;
 }
 
-.nav__link:active {
+.nav__link:active,
+.nav__link:hover {
   background-color: #ffffff;
   color: #0b0b0b;
   border-radius: 2rem;
