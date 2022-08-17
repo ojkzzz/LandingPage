@@ -918,7 +918,9 @@ footer {
     position: relative;
     overflow: hidden;
     height: 757px;
-    background-image: url("img/Background.png");
+    /* background-image: url("img/Background.png"); */
+    background: url(../img/Background.png) no-repeat;
+    background-size: cover;
     color: #ffffff;
   }
 
@@ -996,7 +998,8 @@ footer {
 
   article.itBerries {
     height: 547px;
-    background: url("img/ITB.png") no-repeat 47px 30px #1d1d1d;
+    background: url("../img/ITB.png") no-repeat #1d1d1d;
+    background-position: center;
   }
 
   .itBerries__right {
