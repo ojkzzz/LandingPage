@@ -23,7 +23,6 @@ function makeAnimationInProjects() {
 
   function clickFirstLine() {
     listItems[0].addEventListener("click", function () {
-    
       projectImgs.forEach((el) => {
         el.classList.remove("displayNone");
       });
@@ -69,3 +68,45 @@ function scrollToTop() {
 }
 
 scrollToTop();
+
+function burgerActive() {
+  const burger = document.querySelector(".burger");
+  const logo = document.querySelector(".header__logo");
+  const header = document.querySelector("header");
+  const nav = document.querySelector(".designerMobile nav");
+  const contactMe = document.querySelector(".designerMobile__contactMe");
+  const body = document.querySelector("body");
+
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("active");
+    logo.classList.toggle("active");
+    header.classList.toggle("active");
+    nav.classList.toggle("active");
+    body.classList.toggle("disabledBody");
+  });
+
+  contactMe.addEventListener("click", function () {});
+}
+burgerActive();
+
+/* ---------------------------------------------------------------------- */
+
+function getScreenWidth() {
+  let screenWidth = window.screen.width;
+  return screenWidth;
+}
+
+function changeTextInItberries() {
+  const itBerriesText = document.querySelector(".itberries__readMore");
+  const resumeAboutMeText = document.querySelector(".resume__aboutMe__text");
+  const contactTopText = document.querySelector(".contact__top__text p");
+  if (getScreenWidth() <= 382) {
+    itBerriesText.textContent = "MORE";
+    resumeAboutMeText.innerHTML = `
+    <p>My name is Tomasz Gajda, I'm a third year Applied Computer Science student at the AGH University of Science and Technology in Krakow. I have been learning Front-End technologies for a year and this time was just enough for me to make sure that this is my place in the industry.</p>
+    <p>Membership in the science club developed my design skills, which quickly turned into a new hobby. I am fluent in English (spoken and written) and intermediate Spanish. Apart from designing and programming websites, my passion is all kinds of motorsport - from rallies to the very king of motorsport - formula 1.</p>`;
+    contactTopText.innerHTML = `My name is Oleg Platunov, I’m a third year Applied Computer Science student at AGH University of Science and Technology in Cracow, Poland. `;
+  }
+}
+
+changeTextInItberries();

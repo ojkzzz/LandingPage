@@ -28,7 +28,8 @@ a {
   margin-bottom: 6rem;
 }
 
-.burger {
+.burger,
+.header__logo {
   display: none;
 }
 
@@ -84,6 +85,10 @@ section.designer {
   height: 1022px;
   background-color: #d7d7d7;
   position: relative;
+}
+
+.designerMobile {
+  display: none;
 }
 
 .designer__logo {
@@ -830,17 +835,332 @@ footer {
 }
 
 @media (max-width: 382px) {
-  nav.nav__header {
-    flex-direction: column;
-    position: relative;
+  .header {
+    margin-bottom: 0;
+    height: 57px;
+    display: flex;
+    justify-content: flex-end;
   }
+  nav.nav__header {
+    /* 
+    flex-direction: column;
+    position: relative; 
+    */
+    display: none;
+  }
+
+  .header__logo {
+    align-self: center;
+    margin-left: 30px;
+  }
+
+  .header__logo.active {
+    display: block;
+  }
+
+  .header.active {
+    justify-content: space-between;
+  }
+
   .burger {
     display: block;
-    position: absolute;
-    top: 20px;
-    right: 0;
+    position: relative;
+    width: 56px;
+    height: 57px;
   }
+  .burger span,
+  .burger::before,
+  .burger::after {
+    height: 2.5px;
+    width: 30.91px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 0.5s ease-in;
+  }
+
   .burger span {
-    border: 1px solid white;
+    top: 28px;
+    left: 12px;
+  }
+  .burger::before {
+    content: "";
+    top: 38px;
+    left: 12px;
+  }
+  .burger::after {
+    content: "";
+    top: 18px;
+    left: 12px;
+  }
+
+  .active span {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .active.burger::before {
+    top: 28px;
+    transform: rotate(45deg);
+  }
+  .active.burger::after {
+    top: 28px;
+    transform: rotate(-45deg);
+  }
+
+  section.designer {
+    display: none;
+  }
+
+  .designerMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 757px;
+    background-image: url("/img/Background.png");
+    color: #ffffff;
+  }
+
+  .designerMobile__socialMedia {
+    display: flex;
+    width: 170px;
+    justify-content: space-around;
+  }
+
+  .designerMobile__socialMedia li {
+    list-style-type: none;
+  }
+  .designerMobile h3 {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  .designerMobile h2 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .designerMobile img {
+    margin-bottom: 28px;
+  }
+
+  .designerMobile nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -172px;
+    width: 100%;
+    height: 172px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: top 0.7s ease-in;
+  }
+
+  .designerMobile nav.active {
+    top: 0;
+    border-top: 1px solid #ffffff;
+  }
+
+  .designerMobile nav a {
+    width: 100%;
+    height: 57px;
+    text-align: center;
+    line-height: 43px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .designerMobile__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 215px;
+  }
+
+  .designerMobile nav a:hover {
+    background-color: #ffffff;
+    color: #0b0b0b;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  .disabledBody {
+    height: 814px;
+    overflow-y: hidden;
+  }
+
+  article.itBerries {
+    height: 547px;
+    background: url("/img/ITB.png") no-repeat 47px 30px #1d1d1d;
+  }
+
+  .itBerries__right {
+    display: none;
+  }
+
+  .itBerries__left {
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .itBerries__text {
+    width: 284px;
+    height: 275px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .itBerries .itBerries__header {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  section.resume {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  section.resume h3,
+  .portfolio h3,
+  .contact__top__title h3 {
+    font-size: 14px;
+    font-weight: 700;
+    width: 210px;
+    padding: 15px;
+  }
+
+  .resume__aboutMe {
+    align-items: center;
+  }
+
+  section.resume p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    width: 265px;
+    text-align: justify;
+  }
+
+  .resume h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  .resume__aboutMe p:first-of-type {
+    margin-bottom: 30px;
+  }
+
+  .resume__development__top__design,
+  .resume__development__top__development,
+  .resume__development__bottom {
+    width: 265px;
+  }
+
+  .resume__development__top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume__learning,
+  .resume__learning__languages,
+  .resume__otherSkills,
+  .resume__usage__languages__bottom,
+  .resume__usage__languages__top .resume__usage__languages__top__sass {
+    display: none;
+  }
+
+  .resume__usage {
+    margin-top: 110px;
+  }
+
+  .resume__usage__languages__top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume__usage__languages__top div:first-of-type {
+    margin-left: 0;
+  }
+
+  section.resume .resume__usage__languages__top p {
+    width: auto;
+    text-align: center;
+  }
+
+  .resume__usage h4 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.18538em;
+  }
+
+  .resume__skills img {
+    width: 84.21px;
+    height: 100px;
+  }
+
+  .resume__usage__languages .resume__usage__languages__top p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .resume__usage__languages__top div:not(:last-of-type) {
+    margin-bottom: 71px;
+  }
+
+  .resume__usage__languages__top__html {
+    margin-top: 50px;
+  }
+
+  .portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 194px;
+    background-size: cover;
+    background-position: 20%;
+  }
+
+  .portfolio__title {
+    padding: 0;
+  }
+
+  .portfolio__title h3 {
+    margin: 0;
+  }
+  .contact__top__title {
+    margin-top: 90px;
+  }
+
+  .projects__footer p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .contact__top__text {
+    width: auto;
+  }
+  .contact__top__text p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    width: 300px;
+    text-align: justify;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    width: 245px;
   }
 }
+
+/* font-family: 'Advent Pro', sans-serif;
+   font-family: 'Open Sans', sans-serif; */
