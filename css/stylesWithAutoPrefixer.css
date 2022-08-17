@@ -1160,6 +1160,10 @@ footer {
   .contact form textarea {
     width: 245px;
   }
+
+  .footer__copyrights p {
+    text-align: center;
+  }
 }
 
 /* font-family: 'Advent Pro', sans-serif;
