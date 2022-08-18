@@ -136,9 +136,9 @@ function changeTextInItberries() {
   if (getScreenWidth() <= 500) {
     itBerriesText.textContent = "MORE";
     resumeAboutMeText.innerHTML = `
-    <p>My name is Tomasz Gajda, I'm a third year Applied Computer Science student at the AGH University of Science and Technology in Krakow. I have been learning Front-End technologies for a year and this time was just enough for me to make sure that this is my place in the industry.</p>
-    <p>Membership in the science club developed my design skills, which quickly turned into a new hobby. I am fluent in English (spoken and written) and intermediate Spanish. Apart from designing and programming websites, my passion is all kinds of motorsport - from rallies to the very king of motorsport - formula 1.</p>`;
-    contactTopText.innerHTML = `My name is Oleg Platunov, I’m a third year Applied Computer Science student at AGH University of Science and Technology in Cracow, Poland. `;
+    <p>My name is Oleg Platunov. I have been learning Front-End technologies for a year and this time was just enough for me to make sure that this is my place in the industry.</p>
+    <p>Membership in the science club developed my design skills, which quickly turned into a new hobby. I am almost fluent in English (spoken and written). Apart from designing and programming websites, my passion is sport and active relaxing.</p>`;
+    contactTopText.innerHTML = `My name is Oleg Platunov. I have been learning Front-End technologies for a year and this time was just enough for me to make sure that this is my place in the industry.`;
     textInImg.innerHTML = `Restaurant browsing in React.js<br>(Using Yelp API)`;
   }
 }
